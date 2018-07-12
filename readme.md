@@ -6,3 +6,5 @@ A small script for rescuing the 'invisible shapefile' issue I've seen a few time
 
 To use; point the two filepaths at the top of the script to the broken .shp and a new .shp in a different folder,
 then run.
+
+Presently only works with polygons.
