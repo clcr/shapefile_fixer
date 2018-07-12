@@ -3,8 +3,8 @@ import gdal
 
 ogr.UseExceptions()
 
-bad_shapefile_path = r"C:\IT\syrena_bad_shapefile\reamark_c_backup\Remark_c.shp"
-new_shapefile_path = r"C:\IT\syrena_bad_shapefile\remark_c_fixed\Remark_c.shp"
+bad_shapefile_path = r"C:\projects\ForestSentinel\Example_outputs\KENYA_LAIKIPIA_20171006_20170718_001_BROKEN\KENYA_LAIKIPIA_20171006_20170718_001.shp"
+new_shapefile_path = r"C:\projects\ForestSentinel\Example_outputs\KENYA_LAIKIPIA_20171006_20170718_001\KENYA_LAIKIPIA_20171006_20170718_001.shp"
 
 
 def iterate_features(layer):
@@ -29,7 +29,7 @@ if __name__ == "__main__":
     new_layer = new_shapefile.CreateLayer(
         "remarks",
         srs,
-        geom_type=ogr.wkbPoint
+        geom_type=ogr.wkbPolygon
     )
 
     for field in iterate_fields(old_layer.GetFeature(0)):
